@@ -2,10 +2,10 @@
 import sys
 sys.setrecursionlimit(10000) #재귀함수 최대 깊이 설정
 input = sys.stdin.readline
-N,M = map(int,input().split())
-A = [[] for _ in range(N+1)]
-visited = [False] * (N+1)
-result = 0
+N,M = map(int,input().split())  #노드, 에지 개수 입력
+A = [[] for _ in range(N+1)]    #인접 리스트
+visited = [False] * (N+1)   #방문 리스트
+result = 0  #연결요소의 개수
 
 def DFS(v): #DFS 탐색 실행
     visited[v] = True
